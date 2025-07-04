@@ -1,5 +1,9 @@
 # 📚 Módulo 01 - Operadores e Manipulação de Strings
 
+## Certificado de conclusão
+
+![Certificado de conclusão do Módulo 01](https://github.com/user-attachments/assets/41ed0206-981a-45e6-b7a3-a8da7ca397ad)
+
 Este módulo aborda os conceitos fundamentais de **operadores** e **manipulação de strings** em Python, essenciais para o desenvolvimento back-end.
 
 ## 📖 Conteúdo do Módulo
