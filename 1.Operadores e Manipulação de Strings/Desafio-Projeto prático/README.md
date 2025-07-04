@@ -126,3 +126,7 @@ Este projeto consolidou conhecimentos sobre:
 **Desenvolvido por:** Ithallo  Leandro R. Barbosa
 **Curso:** Santander Back-End Python  
 **Módulo:** Operadores e Manipulação de Strings
+
+## Certificado de conclusão do Desafio
+
+![Certificado](https://github.com/user-attachments/assets/f2a4a940-1f78-415c-a052-580fa631ac90)
