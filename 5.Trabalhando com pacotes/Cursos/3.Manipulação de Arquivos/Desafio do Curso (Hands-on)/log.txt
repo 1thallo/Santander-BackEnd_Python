@@ -1,0 +1,14 @@
+[18/07/2025 01:03:20] Função: depositar | Argumentos: arg1=100.0 | Retorno: True
+[18/07/2025 01:03:20] Função: sacar | Argumentos: arg1=50.0 | Retorno: True
+[18/07/2025 01:03:20] Função: sacar | Argumentos: arg1=50.0 | Retorno: True
+[18/07/2025 01:03:20] Função: depositar | Argumentos: arg1=200.0 | Retorno: True
+[18/07/2025 01:03:20] Função: sacar | Argumentos: arg1=75.0 | Retorno: True
+[18/07/2025 01:03:20] Função: sacar | Argumentos: arg1=75.0 | Retorno: True
+[18/07/2025 01:03:20] Função: depositar | Argumentos: arg1=300.0 | Retorno: True
+[18/07/2025 01:03:29] Função: depositar | Argumentos: arg1=100.0 | Retorno: True
+[18/07/2025 01:03:29] Função: sacar | Argumentos: arg1=50.0 | Retorno: False
+[18/07/2025 01:03:29] Função: depositar | Argumentos: arg1=200.0 | Retorno: True
+[18/07/2025 01:03:29] Função: sacar | Argumentos: arg1=75.0 | Retorno: False
+[18/07/2025 01:03:29] Função: depositar | Argumentos: arg1=300.0 | Retorno: True
+[18/07/2025 01:03:40] Função: depositar | Argumentos: arg1=169.0 | Retorno: True
+[18/07/2025 01:03:54] Função: sacar | Argumentos: arg1=10.0 | Retorno: False
