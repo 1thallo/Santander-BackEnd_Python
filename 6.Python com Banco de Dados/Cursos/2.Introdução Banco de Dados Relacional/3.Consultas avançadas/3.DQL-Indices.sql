@@ -1,0 +1,18 @@
+EXPLAIN
+	SELECT * FROM BTCTB001_USUARIO 
+	WHERE YEAR(DT_NASCIMENTO) = 2000;
+    
+# '1', 'SIMPLE', 'BTCTB001_USUARIO', NULL, 'ALL', NULL, NULL, NULL, NULL, '3', '100.00', 'Using where'
+
+-- Query Otimizada:
+-- Criar índice
+CREATE INDEX IDX_DT_NASCIMENTO ON BTCTB001_USUARIO(DT_NASCIMENTO);
+
+EXPLAIN
+SELECT * FROM BTCTB001_USUARIO 
+WHERE DT_NASCIMENTO BETWEEN '2000-01-01' AND '2000-12-31';
+
+-- # id	select_type	table	partitions	type	possible_keys	key	key_len	ref	rows	filtered	Extra
+--   1	SIMPLE	BTCTB001_USUARIO		range	IDX_DT_NASCIMENTO	IDX_DT_NASCIMENTO	3		1	100.00	Using index condition
+
+
