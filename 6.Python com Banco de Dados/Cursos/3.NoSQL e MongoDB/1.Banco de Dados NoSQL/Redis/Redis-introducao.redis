@@ -1,0 +1,140 @@
+// =====================================================
+//                    REDIS COMMANDS
+// =====================================================
+// Arquivo: Redis-Introducao.redis
+// Objetivo: Comandos básicos do Redis
+// Data: 2025-01-17
+// Extensão: .redis é reconhecida por algumas IDEs
+// =====================================================
+
+// CONEXÃO E INFORMAÇÕES BÁSICAS
+PING
+INFO server
+CLIENT LIST
+
+// =====================================================
+//                  COMANDOS BÁSICOS
+// =====================================================
+
+// STRING OPERATIONS
+SET nome "João Silva"
+GET nome
+SET idade 30
+INCR idade
+DECR idade
+SET contador 0
+INCRBY contador 5
+
+// STRING COM EXPIRAÇÃO (TTL)
+SET session_user123 "dados_da_sessao" EX 3600  // Expira em 1 hora
+TTL session_user123
+EXPIRE nome 60  // Define TTL de 60 segundos
+
+// =====================================================
+//                    HASH OPERATIONS
+// =====================================================
+
+// CRIAR HASH DE USUÁRIO
+HSET user:1 name "Bob Esponja"
+HSET user:1 age 25
+HSET user:1 city "Fenda do Biquini"
+HSET user:1 job "Cozinheiro"
+
+// MÚLTIPLOS CAMPOS DE UMA VEZ
+HMSET user:2 name "Patrick Estrela" age 24 city "Fenda do Biquini" job "Desempregado"
+
+// LER DADOS DO HASH
+HGET user:1 name
+HGETALL user:1
+HKEYS user:1
+HVALS user:1
+
+// =====================================================
+//                    LIST OPERATIONS
+// =====================================================
+
+// CRIAR LISTAS
+LPUSH tarefas "Fazer hambúrguer"
+LPUSH tarefas "Atender clientes"
+RPUSH tarefas "Limpar cozinha"
+
+// LER LISTAS
+LRANGE tarefas 0 -1  // Todos os elementos
+LLEN tarefas         // Tamanho da lista
+LPOP tarefas         // Remove e retorna primeiro
+RPOP tarefas         // Remove e retorna último
+
+// =====================================================
+//                    SET OPERATIONS
+// =====================================================
+
+// CRIAR SETS (sem duplicatas)
+SADD funcionarios "Bob Esponja"
+SADD funcionarios "Lula Molusco"
+SADD funcionarios "Sr. Siriguejo"
+
+SADD clientes "Patrick Estrela"
+SADD clientes "Sandy"
+SADD clientes "Bob Esponja"  // Bob é funcionário E cliente
+
+// OPERAÇÕES DE SET
+SMEMBERS funcionarios
+SCARD funcionarios           // Conta membros
+SISMEMBER funcionarios "Bob Esponja"  // Verifica se existe
+SINTER funcionarios clientes  // Interseção (quem é funcionário E cliente)
+
+// =====================================================
+//                 SORTED SET OPERATIONS
+// =====================================================
+
+// RANKING DE JOGADORES
+ZADD ranking 1500 "Bob Esponja"
+ZADD ranking 1200 "Patrick Estrela"
+ZADD ranking 1800 "Sandy"
+ZADD ranking 900 "Lula Molusco"
+
+// CONSULTAR RANKING
+ZRANGE ranking 0 -1 WITHSCORES     // Ordem crescente de score
+ZREVRANGE ranking 0 -1 WITHSCORES  // Ordem decrescente (ranking)
+ZRANK ranking "Bob Esponja"        // Posição no ranking
+ZSCORE ranking "Sandy"             // Score específico
+
+// =====================================================
+//                    OPERAÇÕES GERAIS
+// =====================================================
+
+// VERIFICAR TIPOS
+TYPE nome
+TYPE user:1
+TYPE tarefas
+TYPE funcionarios
+TYPE ranking
+
+// LISTAR CHAVES
+KEYS *
+KEYS user:*
+KEYS *funcionarios*
+
+// DELETAR DADOS
+DEL nome
+DEL user:1
+FLUSHDB  // CUIDADO: Apaga tudo do database atual
+// FLUSHALL  // CUIDADO: Apaga tudo de todos os databases
+
+// =====================================================
+//                    DATABASES
+// =====================================================
+
+// Redis tem 16 databases numerados (0-15)
+SELECT 0  // Database padrão
+SELECT 1  // Trocar para database 1
+INFO keyspace  // Ver informações dos databases
+
+// =====================================================
+//                    MONITORAMENTO
+// =====================================================
+
+// MONITOR  // Vê todos os comandos em tempo real (CTRL+C para sair)
+// INFO memory
+// INFO stats
+// CONFIG GET maxmemory
