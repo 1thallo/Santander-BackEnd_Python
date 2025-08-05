@@ -2,6 +2,10 @@
 
 Repositório criado para armazenar conteúdo do Bootcamp 2025 do Santander em Back-end com Python.
 
+# Certificado de Conclusão do Bootcamp
+<img width="1116" height="792" alt="image" src="https://github.com/user-attachments/assets/c4d49ac0-2497-48c2-9d4e-480bbe3eb29f" />
+
+
 ## Sobre o Bootcamp
 
 Este bootcamp, promovido pelo Santander em parceria com a DIO, oferece uma jornada completa para quem deseja se especializar em Back-end com Python. O conteúdo abrange desde os conceitos fundamentais da linguagem até tópicos avançados, como Programação Orientada a Objetos (POO) e integração com bancos de dados.
