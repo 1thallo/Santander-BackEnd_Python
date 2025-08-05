@@ -3,8 +3,12 @@
 ## O que é TDD?
 TDD é uma sigla para `Test Driven Development`, ou Desenvolvimento Orientado a Testes. A ideia do TDD é que você trabalhe em ciclos.
 
+## Certificado de Conclusão
+<img width="1118" height="790" alt="image" src="https://github.com/user-attachments/assets/815048ba-4b0a-4727-9c42-f43d7330280f" />
+
+
 ### Ciclo do TDD
-![Ciclo do TDD](/docs/img-tdd.png)
+![Ciclo do TDD](./docs/img-tdd.png)
 
 ### Vantagens do TDD
 - entregar software de qualidade;
@@ -35,12 +39,12 @@ Uma aplicação que:
 Desenvolvimento de uma aplicação simples a partir do TDD, que permite entender como criar tests com o `pytest`. Construindo testes de Schemas, Usecases e Controllers (teste de integração).
 
 ### Arquitetura
-|![C4](/docs/store.drawio.png)|
+|![Imagem](./docs/store.drawio.png)|
 |:--:|
 | Diagrama de C4 da Store API |
 
 ### Banco de dados - MongoDB
-|![C4](/docs/product.drawio.png)|
+|![Imagem](./docs/product.drawio.png)|
 |:--:|
 | Database - Store API |
 
